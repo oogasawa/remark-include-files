@@ -1,0 +1,24 @@
+{
+  "name": "@oogasawa/remark-include-files",
+  "version": "1.0.0",
+  "description": "Remark plugin for Docusaurus: include external files via <include src head lang title>, render with <CodeBlock>, and add a download link.",
+  "main": "index.js",
+  "type": "commonjs",
+  "keywords": [
+    "remark",
+    "mdx",
+    "docusaurus",
+    "include",
+    "CodeBlock",
+    "plugin"
+  ],
+  "author": "Osamu Ogasawara",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oogasawa/remark-include-files"
+  },
+  "dependencies": {
+    "unist-util-visit": "^4.1.1"
+  }
+}
