@@ -26,21 +26,41 @@ npm install @yourname/remark-include-files
 
 ## Docusaurus config
 
+Add the following line at the beginning of `docusaurus.config.js`:
+
 ```js
-// docusaurus.config.js
+import {themes as prismThemes} from 'prism-react-renderer';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import remarkIncludeFiles from 'remark-include-files'; // Added
+```
+
+Also, in the `remarkPlugins` section, add it like this:
+
+```js
 module.exports = {
   presets: [
     [
-      '@docusaurus/preset-classic',
-      {
+      'classic',
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
         docs: {
-          remarkPlugins: [require('@yourname/remark-include-files')],
+          routeBasePath: '/',
+          sidebarPath: './sidebars.js',
+          showLastUpdateTime: true,
+          remarkPlugins: [
+            remarkMath,
+            remarkIncludeFiles // Added here
+          ],
+          rehypePlugins: [rehypeKatex],
+          // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-      },
+      }),
     ],
   ],
 };
 ```
+
 
 ## Notes
 
