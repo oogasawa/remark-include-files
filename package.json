@@ -1,24 +1,29 @@
 {
-  "name": "@oogasawa/remark-include-files",
+  "name": "remark-include-files",
   "version": "1.0.0",
-  "description": "Remark plugin for Docusaurus: include external files via <include src head lang title>, render with <CodeBlock>, and add a download link.",
+  "description": "A Remark plugin for Docusaurus to conditionally include external files content in Markdown.",
   "main": "index.js",
-  "type": "commonjs",
   "keywords": [
     "remark",
-    "mdx",
     "docusaurus",
+    "markdown",
+    "plugin",
     "include",
-    "CodeBlock",
-    "plugin"
+    "conditional"
   ],
   "author": "Osamu Ogasawara",
   "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/oogasawa/remark-include-files"
+    "url": "https://github.com/oogasawa/remark-include-files.git"
   },
-  "dependencies": {
-    "unist-util-visit": "^4.1.1"
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"No tests yet\" && exit 0"
   }
 }
+
